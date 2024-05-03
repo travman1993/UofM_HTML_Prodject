@@ -8,6 +8,22 @@ body {
     padding: 0px;
 }
 
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.386);
+  color: white;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  top: -.5%;
+  left: 10%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
 header {
     background-color: rgb(195, 220, 220);
     border: 2px solid blacks;
@@ -27,6 +43,7 @@ a {
 }
 
 nav {
+    padding-left: 9.8%;
     display: inline-block;
     width: 80%;
     text-align: center;
@@ -38,10 +55,6 @@ nav button {
     font-size: 10px;
 }
 
-ul {
-
-}
-
 /*li {
     width: 20%;
 }*/
@@ -50,9 +63,22 @@ button {
 
 }
 
+button:hover {
+    background-color: rgba(158, 177, 190, 0.643);
+    color: black;
+}
+
 main {
     background-color: rgba(158, 177, 190, 0.643);
     font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 h2 {
@@ -60,22 +86,24 @@ h2 {
 }
 
 h3 {
-
+    
 }
 
 p {
-   line-height: 23px; 
+   line-height: 23px;
+   display: flex;
+   justify-content: center; 
 }
 
 .players {
-    display: flex;
     display: grid;
     justify-content: space-around;
+    columns-gap: 2px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .players img {
-    border-radius: 100px 100px 100px 100px;
+    border-radius: 100px 0px 100px 0px;
     width: 100%;
 }
 
@@ -86,13 +114,60 @@ h4 {
 }
 
 img {
+    border: lightgray solid 2px;
+    padding: 0px;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+}
 
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul img {
+    text-decoration: none;
+    border: none;
+    display: block;
+    padding-left: 13px;    
 }
 
 footer {
     background-color: antiquewhite;
+    text-align: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    padding-top: 10px;
+}
+
+.copyRight {
+    padding-bottom: 10px;
+}
+
+.footerBtn {
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgAdded {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    padding-left: 9%;
 }
 
 h5 {
-
+    display: flex;
+    justify-content: center;
 }
